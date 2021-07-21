@@ -2,6 +2,7 @@
 
 const clickerCounter = document.getElementById("clicker__counter");
 const image = document.getElementById("cookie");
+const clickerStatus = document.getElementById("clicker__status");
 
 
 function clickCounter() {
@@ -19,5 +20,7 @@ function changeSize() {
 }
 
 image.onclick = changeSize;
+
+
 
 
