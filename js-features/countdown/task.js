@@ -9,7 +9,7 @@ while (deadline === null || isNaN(deadline) !== false || deadline === "") {
 
 let time = +deadline * 3600;
 
-setInterval(updateTimer, 1000);
+let interval = setInterval(updateTimer, 1000);
 
 function updateTimer() {
     let seconds = Math.floor(time % 60);
@@ -22,6 +22,14 @@ function updateTimer() {
     seconds = seconds < 10 ? `0${seconds}` : seconds;    
 
     timer.textContent = `${hours}:${minutes}:${seconds}`;
-
     time--;
+
+    if (timer.textContent === `00:00:00`) {
+        alert("Конкурс завершен!");
+        window.location.assign("competition.html");
+        clearInterval(interval);
+    }
 }   
+
+
+
