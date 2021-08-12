@@ -31,7 +31,7 @@ function game() {
                 reload();
             }
         };
-    } 
+    }
 }
 
 game();
