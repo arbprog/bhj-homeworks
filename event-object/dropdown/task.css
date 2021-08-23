@@ -48,6 +48,7 @@
 
 .dropdown__list_active {
   display: block;
+  left: 35%;
 }
 
 .card {
