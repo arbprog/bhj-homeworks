@@ -28,9 +28,7 @@ class Game {
       const currentSymbol = this.currentSymbol.textContent.toLowerCase().charCodeAt();
       this.enteredSymbol = event.key.toLowerCase().charCodeAt();
 
-      const buttonShift = 115;
-
-      if (this.enteredSymbol === buttonShift) {
+      if (this.enteredSymbol === currentSymbol) {
         this.success();
       } else {
         this.fail();
