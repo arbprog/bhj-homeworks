@@ -8,6 +8,6 @@ modalClose.addEventListener('click', () => {
   modal.classList.remove('modal_active');
 });
 
-if(document.cookie.length == 0){
+if (document.cookie.length == 0) {
   modal.classList.add('modal_active');
 }

@@ -4,13 +4,13 @@ const form = document.getElementById('signin__form');
 const signin = document.getElementById('signin');
 let user = localStorage.user_id;
 
-if(user){
+if (user) {
   welcomeUser();
 } else {
   signin.classList.add('signin_active');
 }
 
-form.addEventListener ('submit', sendRequest);
+form.addEventListener('submit', sendRequest);
 
 function sendRequest(e) {
   const formData = new FormData(form);
@@ -21,7 +21,7 @@ function sendRequest(e) {
   xhr.open('POST', requestURL);
   xhr.responseType = 'json';
 
-  xhr.addEventListener('readystatechange', function() {
+  xhr.addEventListener('readystatechange', function () {
     if (this.readyState == 4 && this.status == 200) {
       if (!xhr.response.success) {
         alert('Неверный логин/пароль');
